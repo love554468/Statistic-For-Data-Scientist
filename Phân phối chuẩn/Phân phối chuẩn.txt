@@ -1,0 +1,64 @@
+I Giới thiệu
+II Nội dung
+III Kết luận
+
+I
+Phân phổi chuẩn: là phân phối các pt thống kê dựa vào đó để phân tích
+II
+1. Biểu đồ tần suất histogram
+2. Khái niệm và đặc điểm phân phối chuẩn
+3. Phân phối lệch, nhọn, bẹt
+4. Tại sao phân phối chuẩn lại quan trọng
+5. Tại sao cần kiểm tra phân phối của mẫu
+
+1.
+Biểu đồ tần suất là biểu đồ cột thể hiện phân bố của một mẫu hay một tổng thể nghiên cứu (ảnh1)
+2.
+KN
+Đặc Điểm
+
+KN: 
+phân phối chuẩn là một phân phối lý thuyết
+Nhiều hiện tượng tự nhiên (chiều cao, cân nặng) tuân theo phân phối chuẩn
+Một cái tên quen thuộc hơn của phân phối chuẩn là đường cong hình chuông
+
+Đặc Điểm:
+Có tính đối xứng
+Trung bình, trung vị và yếu vị ở cùng một điểm (tạo nên một đỉnh)
+Phân phối chuẩn là tiệm cận(tức là chạy tiệm cận không tiến sát đến trục hoành)
+ảnh2
+
+3.phân phối lệch, phân phối nhọn, phân phối bẹt
+*Phân phối lệch:
+Độ lệch skew là một đặc điểm được dùng để mô tả một phân phối
+Có 2 loại phân phối lệch: lệch âm - negative skew, lệch dương - positive skew
+
+Sở dĩ gọi là lệch dương vì có một vài quan sát có giá trị cao, lệch dương thì ngược lại
+
+Ở lệch dương thì giá trị trung bình > trung vị > yếu vị và lệch âm thì ngược lại
+Ảnh3
+
+*phân phối nhọn, phân phối bẹt
+Căn cứ vào độ nhọn thấy rằng 2 phân phối không tuân theo phân phối chuẩn: là phân phối (pp) nhọn và pp bẹt
+
+Độ nhọn: kurtosis
+
+Phân phối bẹt: các điểm có tần suất dàn trải hơn, pp chuẩn\
+Phân phối nhọn: các điểm tập trung vào gần đỉnh hơn
+Ảnh4
+
+4. Tại sao pp chuẩn quan trọng
+Pp chuẩn được sử dụng để suy luận (Ước lượng) về tổng thể từ một mẫu
+
+5. Tại sao cần kiểm tra pp của mẫu
+Khi áp một mẫu không có phân phối chuẩn vào một pp chuẩn dẫn đến kết quả không chính xác
+Ảnh5
+
+P(X> X_ngang + 1sd) =0
+P(X> X_ngang +1sd) = 0.16 (theo phân phối chuẩn)
+
+X_ngang trung bình
+1sd: 1 độ lệch chuẩn
+
+nguồn: https://www.youtube.com/watch?v=6m4HJH_1DFU&ab_channel=LearntodoSCIENCE
+

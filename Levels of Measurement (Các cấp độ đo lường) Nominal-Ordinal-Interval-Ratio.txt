@@ -1,0 +1,37 @@
+Thế nào là biến định tính định lượng, thuộc tính nó là gì?
+
+Vd: khi ta tính trung bình độ tuổi (biến định lượng) và tính trung bình biến định tính giới tính
+Thì cái avg_gender nó không có ý nghĩa gì
+=============
+Giới thiệu bài học:
++ Video trình bày nội dung và ứng dụng cụ thể của 4 cấp độ đo lường của biến số: Nominal, ordinal, interval và ratio. Các vị dụ được minh họa dựa vào bảng dữ liệu có cấu trúc. Cấp độ đo lường cao hơn sẽ chứa toàn bộ đặc tính của cấp độ đo lường thấp hơn.
++ Các biến số được đo lường bởi cấp độ nominal và ordinal được phân loại là “biến định tính” (qualitative variable) hoặc còn được gọi là biến phân loại (categorical variable). Các biến số được đo lường bởi cấp độ interval và ratio được phân loại là “biến định lượng” (quantitative variable).
++ Nominal: Cấp độ đo lường định danh (ở VN hay gọi là thang đo định danh)
++ Ordianal: Cấp độ đo lường thứ tự (ở VN hay gọi là thang đo thứ tự)
++ Interval: Cấp đo lường khoảng (ở VN hay gọi là thang đo khoảng)
++ Ratio: Cấp đo lường tỷ lệ (ở VN hay gọi là thang đo tỷ lệ) 
+================
+Đo lường cho biến số:
+- Nominal: Định danh - phân biệt thuộc tính giữa các đối tượng (giống và khác không hơn kém nhau)
+vd: giới tính nam nữ, place: bắc trung nam
+- Ordinal: Định danh + thứ tự (so sánh được hơn kém)
+vd: education: chưa tốt nghiệp cấp3, sau đại học, đại học, trung cấp và cao đẳng
+- Internal: thứ tự + khoảng cách bằng nhau
+= Ordinal + khoảng cách bằng nhau ( cộng trừ được nhưng không chia được)
+
+Không tồn tại giá trị không thực sự  vì có thể di chuyển được
+
+Không có giá trị 0 thực sự là nó không cố định được để mình thực hiện phép chia - tính xem x gấp y bao nhiêu lần
+
+vd: mức hài lòng 1,2,3,4,5
+1 rất không hài lòng
+2 
+3 bình thường
+4
+5 rất hài lòng
+
+- Ratio: tỉ lệ
+= interval + giá trị 0 thực sự
+
+Qualitative: normial. ordinal
+Quanitative: internal và ratio

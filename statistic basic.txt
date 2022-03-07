@@ -1,0 +1,7 @@
+
+P-value
+A/B testing
+cònidence interval
+Bayes
+
+cực kì giỏi về sql, thống kê, cấu trúc dữ liệu giải thuật

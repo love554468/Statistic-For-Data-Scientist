@@ -1,0 +1,22 @@
+Một ví dụ cơ bản về các phép đo trong thống kê
+
+Phép trung bình:
+Cho:
+	Bộ dữ liệu là điểm toán của 2 lớp học, mỗi lớp đều có 30 học sinh, điểm toán từ 0-10
+
+Vậy ý nghĩa của bộ dữ liệu như thế nào? Là ông quản lý thì tôi chỉ quan tâm đến trung bình điểm toán 2 lớp đề đối sánh, là giáo viên tôi sẽ quan tâm hơn đến các điểm 0,1 hoặc 9,10 quan sát từng bạn chứ thầy quản lý thì không cần quan sát chi tiết như vậy
+
+Cái mean: là cái chung đại diện cho từng cá thể.
+
+Phép trung bình là phép đại diện cho mức độ học tập của một lớp học, thì phép độ lệch chuẩn standard deviation là phép đo đếm độ phân tán của dữ liệu giúp cho ta có thể biết rằng lớp đó học đồng đều hay chênh lệch điểm thấp cao
+
+trong giáo dục các ông quản lý thích các học sinh học đồng đều
+
+vd:
+điểm trung bình lớp A: 7 
+Độ lệch chuẩn 2.9
+
+điểm trung bình lớp B: 6.7
+Độ lệch chuẩn 1.3
+
+====> Lớp A học không đều, lớp B học đồng đều hơn 

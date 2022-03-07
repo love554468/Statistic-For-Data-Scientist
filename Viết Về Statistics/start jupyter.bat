@@ -1,0 +1,1 @@
+conda activate Dmining && jupyter notebook 

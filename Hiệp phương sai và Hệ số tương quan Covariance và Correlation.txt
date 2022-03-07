@@ -1,0 +1,34 @@
+Hiệp phương sai giúp ta hiểu hệ số tương quan -> hệ số tương quan giúp ta hiểu hệ số hồi quy
+
+covariane ===> Correlation ======> coeffienet
+
+chết tiệt bay con mẹ nó nội dung luôn, ko hiểu soa mở 2 tab lại lưu tab viết ít sau cùng
+
+bài nói chi tiết về cách hiểu hiệp 
+
+Hiệp chia n cònhệ số tương quan chia zicma X và zicma Y nhân nhau
+
+Tại sao lại chia zicma thì chưa biết
+
+Ý nghĩa của hiệp thì nó range lớn và nhân cùng chiều ngược chiều, tuy nhiên hệ số tương quan thì chỉ trong 1 khoảng -1 đến 1 nên hệ số tương quan có tính chặt chẽ hơn
+
+Nếu không ghi chép cẩn thận dễ quên vì mình không học nhắc lại cụ thể chưa có kế hoạch học nhắc lại
+==============
+tìm thấy rồi may quá
+Hiệp phương sai covariance: là một thứ khó hiểu và nó đóng vai trò đặc biệt trong phân tích và mình phải kĩ càng
+
+Hiệp phương sai là công thức chỉ ra rằng tư duy con người là rất cảm tính, 
+tư duy của hiệp phương sai là tư duy theo tiểu tiết từng đơn vị, tư duy con người luôn muốn đưa về tổng thể, không thể hiểu quá xâu và phức tạp tới từng chi tiết thường, nên ngành thống kê thường có ý nghĩa lớn là như vậy
+
+Để xác định 2 biến số cùng chiều hay ngược chiều nhân cho nhau, càng lớn càng có ý nghĩa
+============
+
+Mức độ hiệp phương sai rõ ràng là nó chưa xác định giới hạn có vô số biên giới
+
+===> tính chặt chẽ không có
+----+>  ta quy về khoảng -1 và -1 để xác định độ tương quan sẽ chặt chẽ hơn
+
+-1 hoàn toàn ngược chiều,
++1 hoàn toàn cùng chiều
+
+Chia cho zicma X và zicma Y thì có ý nghĩa gì ở hệ số tương quan ấy
