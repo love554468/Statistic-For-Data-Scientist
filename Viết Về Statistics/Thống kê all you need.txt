@@ -409,14 +409,118 @@ Phương sai mẫu s^2: phương sai cảu mẫu (x1 , .. xn) chính là tổng 
 s^2 = ((Tổng sigma (i = 1->n) của(xi - x_ngang)^2)/(n-1)
 
 Sao không chia cho n và lại chia cho n-1?
+Ảnh 10
+
+Phương sai là gì:
+ảnh 11
+
+Giả sử chúng ta có X ~ Ber(p) thì phương sai nó là gì?
+ảnh 12
+
+Một số tính chất phải biết
+ảnh 13
+
+Đọc thêm phương sai.txt
+==========================================================
+===================Hiệp phương sai=========================
+
+Rõ ràng là từ một đồ thị hai biến biểu thị một đường đi lên không thể mô tả  chính xác là hai biến x~y tương quan được
+x là lượng mưa, y là số bắp thu hoạch: x tăng thì y tăng theo biểu đồ (ảnh 14) có đúng như vậy không cùng xem xét hiệp phương sai của chúng?
+
+Hiệp phương sai - Covariance: đo lường sự biến thiên cùng nhau của hai biến ngẫu nhiên: Cov(X, Y) = E(X - muy)(Y -v). Trong đó, E(X) = muy và E(Y) = v
+
+Nếu 2 biến có cùng xu hướng biến đổi quanh kỳ vọng (nghĩa là, khi một biến có
+giá trị cao hơn giá trị kỳ vọng thì biến kia có xu hướng cũng cao hơn giá trị kỳ
+vọng, khi một biến có giá trị bé hơn giá trị kỳ vọng thì biến kia có xu hướng cũng
+thấp hơn giá trị kỳ vọng), thì hiệp phương sai giữa hai biến này có giá trị dương.
+
+Mặt khác, nếu một biến lớn hơn kì vọng còn biến kia có xu hướng nằm dưới giá
+trị kì vọng, thì hiệp phương sai của hai biến này có giá trị âm
+
+Công thức trên viết gọn:
+		Cov(X, Y ) = E(XY ) − μν
+
+Nếu X, y là các biến ngẫu nhiên giá trị thực và a, b là các hằng số:
+	Cov(X,) = Var(X)
+	Cov(X,Y) = Cov(Y, X)
 
 
+Điều này cũng giống như "tôi đi cùng anh = anh đi cùng tôi"
+	Cov(aX, bY) = abCov(X, Y)
 
+Trên thực tế, chúng ta ước lượng hiệp phương sai Cov(X, Y) = E(X-  μ (Y -v)) = E(X, Y) - μv bằng hiệp phương sai mẫu:
 
+Cov(X, Y) = 1/(n-1) ) * Tổng zigma (i = 1->n) của (X_i - X_ngang) * (Y_i - Y_ngang)
 
+Tại sao dùng ước lượng này?
+ảnh15
 
+==========================================================
+===================Hệ số tương quan=========================
 
+Ta thấy hiệp phương sai - covariance bị ảnh hưởng bởi đơn vị sử dụng m, cm, dm, mm ... nhiều khi ta cần hạn chế điều này. Khi ấy có thể chuẩn hoá covariance như sau
+ảnh16
 
+Hệ số tương quan càng gần với -1 và 1 thì tương quan giữa các biến càng
+mạnh.
+Hệ số tương quan phụ thuộc vào trung bình của các biến. Mà trung bình thì khá
+nhạy cảm với outlier. Do đó, hệ số tương quan cũng khá nhạy cảm với outlier.
+Hệ số tương quan (correlation) chỉ đo lường mối quan hệ tuyến tính giữa các
+biến. Do đó, ta không nên sử dụng khi mối quan hệ giữa các biến là phi tuyến
+tính (nonlinear).
+Mai:
+- Dữ liệu này cho thấy hệ số tương quan là 0.998, như vậy có phải lượng
+mưa càng nhiều thì số ngô thu hoạch được càng tăng?
+Parker:
+- Thì chính cô nói vậy đó thôi!
+Mai:
+- Như vậy thì nếu lượng mưa là 130mm thì lượng ngô thu được chắc phải
+cao hơn rất nhiều nhỉ?
+Parker gật đầu dù cảm thấy chăng chắc là mình sắp bị lôi ra làm trò hề tiếp!
+Mai:
+- Nhưng mà chỉ có mùa bão thì lượng mưa mới nên tới 130mm! Lúc đó cây
+còn chưa chắc đã không bị cuốn đi chứ đừng nói tới bắp nhiều hơn!
+Parker hí hửng:
+- Ồ! Vậy là cái cô dạy tôi là sai?
+Mai:
+- Sai đâu mà sai! Tại anh ngoại suy ra khỏi vùng dữ liệu cho nên mới như
+vậy! Anh không thấy nếu bỏ 130 vào tập dữ liệu thì 130 thế nào cũng thành
+outlier à?
+Parker chưng hửng:
+- Tôi bị cô dìm hàng quen rồi nên ... không buồn nghĩ!!! Mai:
+- Thực ra thì hệ số tương quan lớn không có nghĩa là cái này dẫn đến cái kia!
+Với lại nên nếu nói hệ số tương quan lớn đồng nghĩa với việc
+"cái này dẫn đến cái kia" thì "nước nhiều dẫn đến ngô nhiều" hay "ngô nhiều
+dẫn đến nước nhiều"? Nhưng nhìn chung chúng ta nên cẩn thận với "ngoại
+suy" (extrapolation), tức là suy luận xa ra khỏi vùng chúng ta nghiên cứu.
+Điều này cũng giống như chúng ta không thể dùng giá cổ phiếu từ năm ngoái
+đến năm nay để dự đoán giá cổ phiếu 100 năm sau!
+
+Các bạn có thể đọc thêm về một số ví dụ thú vị về hệ số tương quan để thấy
+được rằng correlation không đồng nghĩa với "nguyên nhân và kết quả":
+https://www.tylervigen.com/spurious-correlations
+Thông qua đó, chúng ta có thể thấy thêm được rằng nếu hệ số tương quan
+dương và gần 1 thì đồ thị thường trông thế nào và nếu hệ số tương quan âm và
+gần -1 thì đồ thị thường trông thế nào.
+Ứng dụng của hiệp phương sai, hệ số tương quan trong
+chứng khoán
+Khi chơi chứng khoán thì người ta không muốn bỏ tất cả trứng vào cùng một
+rọ. Chẳng hạn như nếu đã đầu tư nhiều vào bất động sản thì không nên cùng
+một lúc đầu tư nhiều vào vật liệu xây dựng vì khi bất động sản hạ nhiệt thì số
+nhà cần xây mới cũng rất có khả năng giảm nhiều. Do đó, chúng ta có thể sử
+dụng hiệp phương sai (Covariance) hoặc hệ số tương quan (correlation) trong
+trường hợp này. Nếu cùng hệ số tương quan thì chúng ta muốn giá X của
+công ty A và giá Y của công ty B có càng gần 0 càng tốt. Nếu càng
+gần -1 thì điều này có nghĩa là khi giá của A hoặc B tăng thì giá của cái còn lại
+sẽ giảm. Đó không phải điều mà chúng ta muốn!
+
+==========================================================
+===================Hàm mật độ=========================
+
+ảnh17, hàm mật độ 1,2,3,4,5,6
+
+Hàm mật độ xác suất; probabillity density function - PDF
+Giúp chúng ta biết đo lường xác suất một biến ngẫu nhiên giao động trong mỗi biến cố. Khả năng xảy ra một thứ thì luôn không âm và cũng đúng với hàm mật độ xác suất.
 
 
 
