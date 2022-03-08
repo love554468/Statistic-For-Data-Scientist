@@ -1,0 +1,266 @@
+Nguồn Mai thống kê: 
+- Dạy cho Parker (có thể là một nhân vật hư cấu) về statistics
+- Các phần tiếp theo có thể public: Machine Learning, oàng tử ham chơi (toán trò chơi và ứng dụng cuộc sống, kinh tế), anh em nhà Tũn (toán cao cấp)
+
+Đế chế phép thuật: trường Laberg
+Mai là phù thuỷ tài năng - đang học đh năm 3 và kèm Parker một con trai chủ doanh nghiệp, chơi bời cho cậu ta học thống kê
+
+Mục lục:
+- Mẫu, trung bình, tham số và thống kê
+- Tứ phân vị
+- Outlier và phân phối của những cực điểm
+- Lấy mẫu - giá đỡ chổi bay
+=Biến ngẫu nhiên và xác suất=
+- Biến ngẫu nhiên rời rạc và định nghĩa cổ điển của xác suất
+- Các công thức cơ bản của xác suất
+- Mụ mèo chửa (hàm phân phối xác suất, phân phối bernoulli, phân phối tích luỹ)
+- Kỳ vọng
+- Đầu ra sản phẩm: phương sai độ lệch chuẩn
+=Biến ngẫu nhiên liên tục=
+2f. hàm mật độ và đồ thị tần số
+4b. phân phối chuẩn
+3c. hiệp phương sai và tương quan
+3d. biến ngẫu nhiên độc lập
+Phân phối mũ phân phối đãng trí
+=Luật số lớn=
+- Mũi tên đãng trí: luật số lớn
+- Định lý giới hạn trung tâm
+- Xấp xỉ phân phối nhị thức bằng phân phối chuẩn
+- Khoảng tin cậy cho trung bình- phân phối student
+- Kiểm định giả thuyết thống kê
+- Kiểm định giả thuyết và khoảng tin cậy cho phương sai
+- Một số chú ý quan trọng về kiểm định giả thuyết thống kê
+- Một số phép kiểm định khác
+- Hồi quy tuyến tính
+- Tài liệu tham khảo
+==========================================================
+===================Mẫu trung bình, tham số và thống kê=========================
+- Mẫu, quan sát, tham số, thống kê, quần thể
+Mẫu là các quan sát ta lấy ra từ quần thể, để đem đi nghiên cứu, ta hy vọng các quan sát trong mẫu có thể đại diện cho quần thể
+Tham số giống như một biến ta nghiên cứu: ví dụ độ tuổi, cân nặng chiều cao,..
+Thống kê là cách lấy xấp xỉ bằng cách sử dụng số liệu
+
+Population: The collection of all individuals or items under consideration in a
+statistical study. Sample: That part of the population from which information is
+obtained. Something that is overall is population, and something that is the
+subset of that overall is a sample
+A parameter is a numerical description of a characteristic of the population. We
+don't know exactly what it is. So, we approximate them by using a statistic, which
+is appropriate estimate that we can obtain from our sample
+==========================================================
+===================Tứ phân vị=========================
+Trung vị- median, quantiles - tứ phân vị, 
+
+Cho một list số thì sau khi sắp xếp theo thứ tự tăng dần: số trung vị chia dãy này thành 2
+(1) biểu hiện các số nhỏ hơn trung vị và trung vị
+(2) biểu thị cho các số lớn hơn và bằng trung vị
+Cách tính trung vị: th lẻ trung vị là số đứng giữa, th chẵn trung bị bằng tổng 2 số đứng giữa chia đôi
+
+Nếu tiếp tục chia 2 phần còn lại thì ta sẽ thu được 4 phần gọi là tứ phân vị, các vị trí tại điểm chia được gọi lần lượt là phân vị thứ nhất (1st quantile), phân vị thứ 2 (trung vị - 2nd quantile), phân vị thứ ba (3rd quantile)
+
+Ví dụng bảng lương theo thang tứ phân vị
+- Nếu bạn có mức lương nằm = 1st quantile - phân vị thứ nhất: thì lương của bạn lớn hơn 25% người còn lại
+- Nhưng cũng có 75% người cao hơn lương của bạn
+- Bây giờ năng lực của bạn nằm ở mức trung bình thì bạn deal lương sẽ dựa vào thông số median hay mean?
+
+Câu hỏi thú vị bạn có thể nhầm là trung bình nhưng trung vị mới là con số chính xác
+Giải thích: Lương của giám đốc, CEO và một số nhân vật chủ chốt khác thường cao đến
+bất bình thường! Ví dụ, lương kỹ sư thông thường là $75 000, nhưng lương của
+tổng giám đốc có thể là 1 triệu đô! Từ góc nhìn thống kê, ta xem mức lương 1
+triệu đô đó là outlier, tức là một quan trắc khác hẳn so với những phần còn lại
+của dữ liệu, như thể chúng không thuộc về tổng thể này! Trong một mẫu dữ liệu
+như vậy, nếu có outlier thì chúng ta nên sử dụng trung vị (median) thay cho trung
+bình mẫu nếu muốn ước lượng điểm trung tâm. Nếu cậu xin vào Mico mà vòi
+mức lương bằng trung bình của tất cả của những người trong công ty thì đó là
+$350 000 . Trong khi đó, lương của một người học tiến sĩ ra mới là $120 000 thì
+ai chịu nhận?
+
+Tóm: nếu trong bộ dữ liệu quan sát thì muốn ước lượng giá trị trung tâm ta nên sử dụng trung vị cho trung bình mẫu
+Ở đây chưa có cách tính tứ phân vị:
+- Mình có thể bổ sung, và thêm boxplot
+==========================================================
+===================Outlier và phân phối của cực điểm=========================
+Outlier - điểm dữ liệu ngoại lai, đi ngược lại số đông
+
+Vd: tỉ phú Elomusk là một ngoại lai của dân mỹ về mức độ lương
+
+Ta cần tìm hiểu nguyên nhân  ngoại lai xuất hiện: nếu do lỗi khi thu thập dữ liệu hoặc thiết bị đo lường bị hư hỏng thì ta hoàn toàn có thể xoá nó khỏi mẫu
+
+Vd: Mức lương từ thấp đến cao của công ty X
+$38000, $41000, $45000, $52000, $60000,
+$74000, $78000, $87000, $95000, $1500000
+
+Ta bỏ $1500000 ra ngoài mẫu thì có thể tính trung bình để ước lượng lương cho người có năng lực trung bình, đối với trường hợp này ta tạm chấp nhận được.
+
+Con số như thế nào được gọi là outlier? Các quan sát chênh lệch nhau bao nhiêu đơn vị?
+Không có định nghĩa rõ ràng về outlier, nếu ta tính toán outlier dựa trên độ đo thì không có ý nghĩa gì, hay tính toán theo việc chênh lệch nhau bao nhiêu đơn vị cũng vậy
+
+Trong trường hợp này thể hiện sự tương đối trong thống kê, outlier cũng có tính tương đối nên dựa vào độ tương đối giữa các mẫu thì ta có thể bỏ qua về đơn vị đo, đơn vị đo nào không quan trọng.
+
+Trong biểu đồ hộp những điểm có khả năng là outlier thường được chỉ rõ bằng các dấu sao hoặc dấu tròn
+
+Boxplot: ảnh 1
+Giới hạn trên: Q3 + 1.5IQR
+Giới hạn dưới: Q1 - 1.5IQR
+Interquantile range: IQR = Q3-Q1
+Phân vị 1,2,3 : q1, q2, q3 (q2 = median)
+
+Dữ liệu cánh bướm:
+Độ dài cánh bướm tính theo milimet là: 34.5mm 31.6mm 30.1mm 32.3mm 23.9mm 27.7mm 28.8mm 35.9mm 27.3mm 45mm
+
+Ảnh2: Điểm hình tròn không nằm giữa giới hạn trên và giới hạn dưới được coi như là một outlier. 
+OULIER là giá trị có độ lớn khác biệt hẳn so với các giá trị khác trong dữ liệu, như thể chúng không thuộc về tổng thể này
+
+Ta có thể loại bỏ outlier này không?
+Nếu anh chắc chắn là outlier xuất hiện
+do sai sót khi thu thập dữ liệu hoặc thiết bị đo lường bị hư hỏng thì anh hoàn
+toàn có thể xóa nó khỏi mẫu. Nhưng nếu không rõ nguyên nhân thì nên tìm hiểu
+về nguyên nhân xuất hiện outlier trước. Nhiều khi dữ liệu đến từ những phân
+phối có đuôi dài (heavy-tail distribution) thì những cái khá lớn so với những quan
+trắc còn lại chưa chắc đã là outlier
+
+Nhiều khi những cực điểm là những cái
+người ta phải quan tâm đến nhiều nhất! Liệng cái gì mà liệng! Tui liệng kiến thức
+vào đầu anh là anh lại liệng trả! Trong cải tiến quá trình sản xuất sợi bông và vải
+ở viện Shirley, thì người ta thấy rằng một trong những vấn đề nan giải là độ chắc
+của một sợi cotton vừa được se. Lực cần để làm đứt một sợi cotton thì khác
+nhau từ sợi này qua sự khác cho dù chúng được xe dưới cùng một điều kiện.
+Sau khi áp dụng lực với cường độ khác nhau, Tippet xem xét sợi chỉ dưới kính
+hiển vi về phát hiện ra rằng việc sợi cotton có đứt hay không thì phụ thuộc vào
+thớ sợi yếu nhất ở bên trong nó. Đây là một ví dụ điển hình là tại sao chúng ta
+nên quan tâm đến distribution of the extreme (phân phối của những cực điểm).
+Đối với người thường, nếu họ biết được phân phối của những cực điểm dính
+dáng thế nào tới phân phối của những giá trị thông thường thì họ có thể dựa trên
+chiều cao của những đợt lũ hàng năm để dự đoán chiều cao của đợt lũ lớn nhất
+trong cả trăm năm. Dựa vào đó thì người ta có thể tính toán chiều cao tối ưu cho
+việc đắp đê ngăn lũ
+==========================================================
+===================lấy mẫu=========================
+- Đọc thống kê thì nên tìm hiểu sơ qua về cách người ta thực hiện nghiên cứu, đừng chỉ đọc kết quả
+
+Lấy mẫu ngẫu nhiên
+Lấy mẫu theo nhóm, cụm: cluster sampling thường được dùng khi phân bố các thành phần của tổng thể phân bố rải rác về mặt địa lý
+Lấy mẫu phân tầng: stratified sampling (phương pháp tối ưu hơn: lấy mẫu phân tầng ngẫu nhiên theo tỉ lệ - stratified random sampling with proportinal allocation)
+
+Lấy ngẫu nhiên: là cách lấy đơn giản nhất hy vọng vào việc mẫu lấy ngẫu nhiên phản ánh được tổng thể toàn bộ tập dữ liệu, điều này dường như bất khả thi
+
+Lấy mẫu theo nhóm: ta lấy theo việc gom theo địa lý, giải quyết việc tốn thời gian di chuyển, sau khi gom nhóm ta lại lấy ngẫu nhiên các nhóm này để lấy mẫu, điều này vẫn có thể dẫn đến việc mẫu lấy không phản ánh tốt thông tin đặc trưng toàn bộ tập dữ liệu
+
+Có một cách nữa là lấy mẫu phân tầng: cách này sẽ chia tập dữ liệu thành các lớp và ta lấy ngẫn nhiên từ các lớp đó
+Vd:làm khảo sát xây một công trình phúc lợi với toàn dân ta phân nhóm thành người thu nhập cao, trung bình và thấp -> Ta đều lấy khảo sát từ các nhóm người này, thay vì cứ lấy đại
+
+Nhưng nếu muốn tối ưu hơn ta sài lấy mẫu phân tầng ngẫu nhiên theo tỉ lệ: người thu nhập cao 15% tổng dân, trung bình 60%, thấp 25%
+
+Ta lấy một mẫu 100 người chẳng hạn thì sẽ lấy 15 người thu nhập cao, 60 trung bình và 25 thấp
+==========================================================
+===================một số lưu ý khác khi lấy mẫu=========================
+Sai lầm phổ biến: không xác định tổng thể trước khi lấy mẫu hoặc lấy mẫu không đại diện cho tổng thể: do đó những khảo sát có quá nhiều câu không được trả lời thường đem lại kết quả lệch lạc so với thực tiễn
+
+- Một trong những sai lầm khá phổ biến là không xác định tổng thể mà chúng ta
+quan tâm trước khi tiến hành lấy mẫu. Sau đó, có thể lại ngoại suy ra khỏi vùng
+khảo sát. Ta phải cẩn thận vì điều này cũng giống như chúng ta không thể áp
+dụng định luật Newton cho cả vũ trụ, và một khi mẫu không đại diện cho tổng thể
+thì cỡ mẫu to không cải thiện được tình hình. Do đó, những khảo sát có quá
+nhiều câu không được trả lời thường đem lại kết quả lệch lạc so với thực tiễn
+(Chẳng hạn những khảo sát qua điện thoại nhưng khi gọi điện thì tới 30% không
+bốc máy. Trong 70% bốc máy chỉ có một nửa chịu tham gia khảo sát.)
+- Ngay cả khi chúng ta đã xác định chính xác được tổng thể mà chúng ta muốn
+nghiên cứu là gì rồi thì việc lấy được một mẫu đại diện cho tổng thể cũng là
+không hề dễ. Chẳng hạn trong trang trại nuôi ếch, ta đi vồ ếch để lấy mẫu thì
+chúng ta phải chọn ngẫu nhiên chứ không phải cứ con nào vồ được (tức là dễ
+vồ) thì tạo thành một mẫu. Nếu làm như vậy thì mẫu này không đại diện cho
+tổng thể vì những con ếch khỏe hơn thường khó bắt hơn. Mà trong những con
+ếch đó lại có thể có nhiều một loại hormone nào đó hơn so với những con ếch
+còn lại.
+Một ví dụ khác: bạn quăng lưới bắt cá để lên mẫu nhưng mắt lưới quá to. Khi
+đó, những con cá nhỏ sẽ bị lọt ra khỏi lưới nên mẫu này không đại diện cho tổng
+thể!
+- Để tránh được những yếu tố dẫn đến đến trong việc lấy mẫu thì chúng ta nên
+xác định các nhân tố có thể ảnh hưởng tới kết quả nghiên cứu (giới tính, lối
+sống, tuổi tác,...) Các giả thuyết cơ bản là chưa chính xác: Làm thí nghiệm thuốc
+trên bệnh nhân mà trong đó đó có một số người cùng huyết thống thì các quan
+sát ở đây không còn là độc lập với nhau nữa. Nướng bánh mà chuyển lò vi sóng
+mới thì thì sẽ có thêm nguồn dao động (source of variation) và do đó các quan
+trắc không có cùng phân phối nữa. Khi này, chúng ta phải phân tích theo dạng
+khối (dùng blocking, phân tích theo block, các bạn có thể tìm hiểu về điều này
+trong bộ môn thiết kế thí nghiệm (design of experiments))
+
+- Chúng ta nên xác định những biến ngẫu nhiên cần thu thập trước khi lấy
+mẫu.Chẳng hạn như khi muốn phát triển một mô hình để dự đoán cháy rừng thì
+chúng ta có thể thu thập những thông tin như sức gió, nhiệt độ, độ ẩm. Ngoài ra,
+ta còn có thể để thu thập thông tin về loại cây vì những loại cây chứa nhiều tinh
+dầu như bạch đàn thì một khi đã cháy đám cháy sẽ lan rất nhanh.
+Ví dụ về độ nghiệm trọng của việc thu thập thiếu: độ tuổi ảnh hưởng đến
+response (biến đáp ứng) nhưng dữ liệu lại cho thấy độ tuổi và biến đáp ứng có
+hệ số tương quan xấp xỉ 0 nếu ta không thu thập cả thông tin về giới tính. (Đọc
+thêm: nghịch lý Simpson (Simpson paradox).)
+- Không nên phân nhóm dữ liệu quá sớm. Ta có thể làm điều này sau khi lấy
+mẫu. Xem chi tiết lý do trong ví dụ về measuring device trang 28, common error
+in statistics.
+Có một số điều khác có thể khiến nghiên cứu bị lệch lạc như sau:
+- Người tham gia khảo sát trả lời đại cách đặt câu hỏi khảo sát là rất quan
+trọng. Khi khảo sát, người thực hiện nên chú ý những rào cản xã hội có thể dẫn
+đến những câu trả lời nhất định. Ví dụ: Cảnh sát hỏi dân về ý kiến của họ với
+mức độ hiệu quả của bộ công an thì 95% người nói rằng thỏa mãn.
+- Nghiên cứu do một đơn vị nào đó tài trợ và không báo cáo những dữ liệu cho
+thấy sản phẩm có chất lượng kém hơn mong đợi
+- Những đơn vị thí nghiệm được sử dụng trong treatment (phép thử) ít quan
+trọng hơn thì thường ít được chú tâm, ít được kiểm soát hơn.
+Kết quả khảo sát, sau khi được công bố nhiều khi cũng có thể có những ảnh
+hưởng khá thú vị: Hồi xưa, ông Trump và bà Clinton tranh cử thì khảo sát cho
+thấy xác suất bà Clinton thắng là áp đảo so với ông Trump. Sau khảo sát, bạn tôi
+nghĩ là chắc bà Clinton thắng nên không đi bầu cử (lý do là bên này quá trình
+tham gia bầu cử hơi phức tạp). Xong, ông Trump thắng, bạn tôi lại hối hận là đã
+không đi bầu cho bà Clinton- Chúng ta nên xác định những biến ngẫu nhiên cần thu thập trước khi lấy
+mẫu.Chẳng hạn như khi muốn phát triển một mô hình để dự đoán cháy rừng thì
+chúng ta có thể thu thập những thông tin như sức gió, nhiệt độ, độ ẩm. Ngoài ra,
+ta còn có thể để thu thập thông tin về loại cây vì những loại cây chứa nhiều tinh
+dầu như bạch đàn thì một khi đã cháy đám cháy sẽ lan rất nhanh.
+Ví dụ về độ nghiệm trọng của việc thu thập thiếu: độ tuổi ảnh hưởng đến
+response (biến đáp ứng) nhưng dữ liệu lại cho thấy độ tuổi và biến đáp ứng có
+hệ số tương quan xấp xỉ 0 nếu ta không thu thập cả thông tin về giới tính. (Đọc
+thêm: nghịch lý Simpson (Simpson paradox).)
+- Không nên phân nhóm dữ liệu quá sớm. Ta có thể làm điều này sau khi lấy
+mẫu. Xem chi tiết lý do trong ví dụ về measuring device trang 28, common error
+in statistics.
+Có một số điều khác có thể khiến nghiên cứu bị lệch lạc như sau:
+- Người tham gia khảo sát trả lời đại cách đặt câu hỏi khảo sát là rất quan
+trọng. Khi khảo sát, người thực hiện nên chú ý những rào cản xã hội có thể dẫn
+đến những câu trả lời nhất định. Ví dụ: Cảnh sát hỏi dân về ý kiến của họ với
+mức độ hiệu quả của bộ công an thì 95% người nói rằng thỏa mãn.
+- Nghiên cứu do một đơn vị nào đó tài trợ và không báo cáo những dữ liệu cho
+thấy sản phẩm có chất lượng kém hơn mong đợi
+- Những đơn vị thí nghiệm được sử dụng trong treatment (phép thử) ít quan
+trọng hơn thì thường ít được chú tâm, ít được kiểm soát hơn.
+Kết quả khảo sát, sau khi được công bố nhiều khi cũng có thể có những ảnh
+hưởng khá thú vị: Hồi xưa, ông Trump và bà Clinton tranh cử thì khảo sát cho
+thấy xác suất bà Clinton thắng là áp đảo so với ông Trump. Sau khảo sát, bạn tôi
+nghĩ là chắc bà Clinton thắng nên không đi bầu cử (lý do là bên này quá trình
+tham gia bầu cử hơi phức tạp). Xong, ông Trump thắng, bạn tôi lại hối hận là đã
+không đi bầu cho bà Clinton
+==========================================================
+===================Biến ngẫu nhiên và định nghĩa cổ điển của xác suất=========================
+ Biến ngẫu nhiên: Thường được kí hiệu là X và có giá trị là kết quả của một hiện tượng ngẫu nhiên
+
+Biến phân loại : categorical variable - vd giới tính: nam nữ other
+Biến rời rạc: discrete random variable là biến ta có thể liệt kê tất cả các giá trị của nó vd: số bàn thắng ronaldo ghi năm 2018
+Biến liên tục vd chiều cao, cân nặng
+
+Không gian mẫu: omega của một thí nghiệm hay thử ngẫu nhiên là tập hợp tất cả các kết quả có thể xảy ra
+VD: trong thí nghiệm tung một đồng xu, không gian mẫu sẽ là . Còn
+đối với thí nghiệm tung một con xúc xắc thì không gian mẫu là {1, 2, 3, 4, 5, 6}
+Biến cố: là tập các kết quả đầu ra outcomes
+vd: Chẳng hạn,khi tung một con xúc xắc thì đều là biến cố
+
+Theo định nghĩa cổ điển của lý thuyết xác suất thì xác suất của một biến
+cố được định nghĩa là . Trong đó, n là tổng số outcome có khả
+năng xảy ra như nhau, n là số lần biến cố E xảy ra. Nói cách khác, người ta định
+nghĩa xác suất xảy ra của một biến cố bằng tần suất nó xảy ra. Như vậy thì rõ
+ràng xác suất của một biến cố luôn nằm giữa 0 và 1 (0<= P(E)<=1 với mọi Omega). Ví dụ
+khi thảy một đồng xu cân bằng thì xác suất mặt ngửa là P(ngửa) = 1/2
+
+Xác suất bạn bắn trúng bia đỡ đạn là 0.2 thì về lâu dài bắn được 10 mũi tên thì bạn chỉ chúng được có 2
+Nếu xác suất bằng 1 là chắc chắn xảy ra: trong lý thuyết thông tin thì những gì là chân lý giống kiểu xác suất bằng 1 này có lượng thông tin bằng 0
+==========================================================
+===================2b. Các công thức cơ bản của xác suất=========================
+
