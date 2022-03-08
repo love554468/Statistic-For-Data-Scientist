@@ -1,10 +1,3 @@
-Nguồn Mai thống kê: 
-- Dạy cho Parker (có thể là một nhân vật hư cấu) về statistics
-- Các phần tiếp theo có thể public: Machine Learning, oàng tử ham chơi (toán trò chơi và ứng dụng cuộc sống, kinh tế), anh em nhà Tũn (toán cao cấp)
-
-Đế chế phép thuật: trường Laberg
-Mai là phù thuỷ tài năng - đang học đh năm 3 và kèm Parker một con trai chủ doanh nghiệp, chơi bời cho cậu ta học thống kê
-
 Mục lục:
 - Mẫu, trung bình, tham số và thống kê
 - Tứ phân vị
@@ -264,3 +257,183 @@ Nếu xác suất bằng 1 là chắc chắn xảy ra: trong lý thuyết thông
 ==========================================================
 ===================2b. Các công thức cơ bản của xác suất=========================
 
+P(A_ngang) = 1- P(A)
+P(A hoac B) = P(A) + P(B) - P(A hợp B) (Các biến phụ thuộc nhau)
+(ảnh 3)
+Nếu biến A, B xung khắc nhau thì sao?
+Hai biến cố A và B được gọi là xung khắc nếu chúng không đồng thời xảy ra trong một phép thử
+Vd: Tung một con xúc xắc, gọi là biến cố xúc xắc
+xuất hiện mặt hai chấm, B là biến cố xúc xắc xuất hiện mặt 3 chấm thì A,B xung khắc
+Nếu hai biến cố xung khắc thì P(A hoặc B) = P(A) + P (B) (ảnh 4)
+
+A_ngang: được gọi là phần bù của A, A và A_ngang là hai biến cố xung khắc, P(A+ A_ngang) = 1, 
+ P(A+ A_ngang) = P(A hoặc A_ngang) = P(A) + P(A_ngang) (A, A_ngang hai biến cố xung khắc)
+=> P(A) +P(A_ngang) = 1
+
+Tổng quát hơn ta cũng có:
+Nếu ta có một chuỗi đếm được bất kì gồm các biến cố đôi một không giao nhau E1, E2,..  thì P(E1 hoặc E2 hoăc ...) = Tổng zigma P( Ei )
+
+Điều này được áp dụng trong định lý Bayes
+==========================================================
+===================Truyện ngụ ngôn xứ Baltimore=========================
+
+(một ví dụ hay ho về xác suất. txt)
+
+==========================================================
+===================Mụ mèo chửa (Hàm khối xác suất, phân phối
+Bernoulli, phân phối tích lũy)=========================
+
+Hàm phân phối xác suất, phân phối bernoulli, phân phối tích luỹ
+
+Giả sử mèo nhà bạn chuẩn bị sinh bốn con thì liệu khả năng sinh được hai đực hai cái là cao nhất hay ba đực một cái hay ba cái một đực?
+
+1111; 0000 Toàn đực hoặc toàn cái (2)
+1110; 1101; 1011; 0111 3 đực 1 cái (4)
+1100; 0011; 1001; 0101; 1010; 0110 2 đực 2 cái (6)
+0001; 0010; 0100; 1000 3 cái 1 đực (4)
+
+Xác suất 3 đực 1 cái và 3 cái một đực đều bằng 4/16 hay 1/2
+Xác suất được 2 đực 2 cái là 3/8
+
+Nên đáp án là 3 đực 1 cái hoặc 3 cái 1 đực
+===
+
+Hàm khối xác suất, phân phối Bernoulli ảnh 5
+
+Biến ngẫu nhiên rời rạc X, x thuộc D, X: omega -> D
+Hàm khối xác suất: px(x) = P(X=x) mọi x thuộc D
+
+Hàm khối xác suất là một xác suất nên phải thoả: ảnh6
+"Trong thực tế có rất nhiều biến ngẫu nhiên nhận hai giá trị kiểu này. Chẳng hạn như thi đâ có thể thắng hoặc thua, trăng lên hay không lên vào buổi tối, .. Khi đó, ta mô hình nó bằng mô hình phân phối Bernoulli. Để hiểu điều này trước tiên, cần hiểu về phân phối xác suất. Đối với biến ngẫu nhiên rời rạc, người ta quan tâm đến xác suất để biến ngẫu nhiên đó nhận tương ứng từng giá trị x thuộc D, hay P(X=x). Giả sử X: Omega -> D. Người ta đặt tên cho tương ứng xác suất này là hàm khối xác suất, kí hiệu px(x) P(X=x) mọi x thuộc D"
+
+Vì hàm khối xác suất cũng là một xác suất, nó phải thoả mãn:
+0<=px(x)<=1 mọi x thuộc D và tổng zigma px(x) = 1 (trên toàn bộ x thuộc D)
+
+Quay lại với mô hình Bernoulli. Phân phối Bernoulli, kí hiệu Bernoulli(p) là một phân phối rời rạc của biến ngẫn nhiêu chỉ nhận hai giá trị 0 hoặc 1 trong đó giá trị 1 đạt được với xácc suất p (ta thường xem như xác suất thành công) và giá trị 0 đạt được với xác suất q=1-p (thường dfudowjc xem là xác suất thất bại). Kí hiệu: X~Berrnoulli(p) (X có phân phối Bernoulli(p)), và ta sẽ có P(X=1) = 1-P(X=0)=1-q=p
+
+(&)Nhưng mèo nhà anh để những 4 con, chứ không phải một con. Giới tính của mỗi mèo con có thể được xem như độc lập với nhau. Do đó, ta sử dụng mô hình nhị thức (binomial distribution) thay cho mô hình Bernoulli. Phân phối nhị thức Binom(n,p) có hàm phân phối xác suất.
+
+P(X=k) =(n k) ^T * p^k *(1-p)^(n-k) với k =0,1,2,3, ...,n
+
+trong đó:
+- (n  k)^T = (n!)/(k! * (n-k)!) và k là số lần thành công trong n lượt thử
+- Công thức trên có thể được hiểu như sau: xác suất xảy ra k lượt thử thành công là p^k và xác suất xảy ra (n-k) lượt thử không thành công là (1-p)^(n-k). Ngoài ra, vì lượt thử thành công có thể được phân bố bất kì trong n lượt thử nên số cách phân bố k lượt thử thành công trong n lượt thử liên tiếp là (n k)^T
+
+Để hiểu ý nghĩa của phân phối nhị thức, ta có thể liên tưởng đến việc thảy một đồng xu n, tức là thực hiện một phép thử n lần, mỗi lần thửu là độc lập với nhau. Xác suất nhận được mặt ngửa trong mỗi lần thảy là p. Như vậy tổng số lần được mặt ngửa trong n lần thảy là
+
+P(X=k) =(n k) ^T * p^k *(1-p)^(n-k) với k =0,1,2,3, ...,n
+
+- Giống như lặp lại mô hình Bernoulli n lần?
+- Đúng, nếu ta có X1, ..., Xn ~ Bernoulli(p) thì Tổng zigma (i =1-> n) của Xi~ Binom(n, p)
+
+Đối với câu đố trên  (&), thì có bao nhiêu lượt thử ?
+4, vì mỗi lần đẻ 1 con mèo, lần lượt, xác suất ra mèo đực và cái là 50-50
+Như vậy n=4, Còn xác suất thành công là bao nhiêu:
+
+p = 1/2 ta coi đẻ mèo đực là thành công, xác suất mỗi lần đẻ là như nhau và độc lập nhau
+
+=> Như vậy khả năng sinh 2 đực , 2 cái có thể được tính trực tiếp qua hàm phân phối xác suất :
+
+(ảnh 7)
+P(X=2)
+X=2 có nghĩa là thành công 2 đực, cũng có nghĩa là 2 đực 2 cái
+P(X=1) tương tự
+P(X=3) tương tự
+Và xác suất sinh được nhiều nhất 2 đực 
+P(X<=2)
+- Ta có tính trực tiếp xác suất này bằng cách sử dụng hàm phân phối tích luỹ (Cummulative distribution function - CDF). Với mỗi số thực x, hàm phân phối tích luỹ được định nghĩa là xác suất mà biến ngẫu nhiên X lấy giá trị nhỏ hơn hay bằng X, tức là:
+
+F_X(x) = P(X<=x)
+
+Người ta chứng minh được phân phối nhị thức có hàm phân phối tích luỹ là F_X(k) = P(X<=k) = Tổng zigma (i: 0->k) của ( (n i)^T * p^i * (1-p)^(n-i))
+
+Vậy xác suất sinh nhiều nhất 2 đực là :
+
+F_X(2) = P(X<=2) = Tổng zigma (i =0->2) của (4 i)^T * (1/2)^i * (1-1/2)^(4-i) = 5/8
+
+Nếu xác suất sinh được từ 2 đến 3 con thì sao? (ảnh 8,9)
+
+Bài tập luyện tập hàm phân phối xác suất .txt
+
+==========================================================
+===================Kỳ vọng=========================
+
+vd về Kì vọng:
+Thử nghiệm nghiên cứu xác suất mặt ngửa xảy ra trong 50 lần thu được kết quả là: 0.7
+
+Nếu có 2 người chơi cá cược:
+A - chọn ngửa
+B - chọn sấp
+
+A bảo rằng gieo đồng xu nếu ngửa thì B phải đưa cho A 1 tờ và, nếu sấp thì A đưa cho B 2 tở, vậy ai sẽ thắng
+
+Xét 100 lần thử:
+
+A được: 100*0.7*1 = 70 tờ tiền
+B được: 100*0.3*2 = 60 tờ tiền
+
+=> Chung cuộc A lãi 10 nghìn
+
+Mỗi lần gieo B được bao nhiêu tiền:
+-10/100 = 0.1
+hay ((100*0.7*-1) + ( 100*0.3*2))/100 = -0.1
+
+Có một cách ngắn hơn để trả lời câu hỏi này: đó là sử dụng khái niệm kì vọng. Nếu X là một biến ngẫu nhiên rời rạc với các giá trị x1, x2,... và các xác suất tương ứng là p1, p2, ... với tổng thể bằng 1, thì kì vọng kí hiệu  E[X] hoặc muy chính là trung bình tổng thể:
+
+E[X] = tổng zigma (i) pi*xi
+
+Như vậy, quay trở lại câu hỏi hồi nãy, thì nếu gọi X là số giấy anh có được sau mỗi lần thảy thì xác suất anh được 2 tờ bằng xác suất mặt sấp bằng 0.3, xác suất anh mất 1 tờ bằng xác suất mặt ngửa và bằng 0.7. Như vậy trung bình mỗi lần thảy anh được muy = 0.3*2 + 0.7*(-1) = -0.1
+Chúng ta ước lượng trung bình tổng thể (kì vọng) bằng trung bình mẫu. Như vậy nếu trong mẫu có các giá trị: -1 -1 -1 -1 ... 2 2 trong đó 70 số -1 và 30 số 2 thì trung bình mẫu là 
+(-1 + -1 + -1 + -1 ... 2 + 2 )/100 = -0.1
+Trung bình mẫu là ước lượng không chệch của trung bình tổng thể - kì vọng. Tức là E(X_ngang) = muy. Sau này học luật số lớn thì ta sẽ thấy, điều này có nghĩa là khi chúng ta thu thập càng nhiều dữ liệu thì trung bình mẫu sẽ tiến càng gần đến trung bình tổng thể (Kì vọng)
+Một số tính chất cơ bản của kì vọng: với hai biến ngẫu nhiên X và Y bất kì được định nghĩa trên cùng một không gian xác suất và hai số thực bất kì
+
+E[aX + bY] = aE[X] + bE[Y]
+|E[X]| <= E[|X|]
+==========================================================
+===================Phương sai độ lệch chuẩn=========================
+
+Theo mình nhớ phương sai là tổng bình phương tất cả các độ lệch
+Độ lệch chuẩn là căn của phương sai thôi: nhưng nó có ý nghĩa thể hiện tốt hơn so với phương sai để ta thấy được độ biến thiên dao động của dữ liệu quanh trung bình mẫu
+
+Tại sao không dùng trị tuyệt đối mà dùng bình phương cho phương sai?
+Lấy đạo hàm để giảm độ dao động các điểm xung quanh trung bình
+
+Phương sai hiểu thế nào?
+Phương - trong bình phương
+Sai - trong độ sai lệch
+
+Kí hiệu zigma bình phương hoặc s^2
+Phương sai mẫu s^2: phương sai cảu mẫu (x1 , .. xn) chính là tổng bình phương các độ chệch chia cho n-1
+
+s^2 = ((Tổng sigma (i = 1->n) của(xi - x_ngang)^2)/(n-1)
+
+Sao không chia cho n và lại chia cho n-1?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nguồn Mai thống kê: 
+- Dạy cho Parker (có thể là một nhân vật hư cấu) về statistics
+- Các phần tiếp theo có thể public: Machine Learning, oàng tử ham chơi (toán trò chơi và ứng dụng cuộc sống, kinh tế), anh em nhà Tũn (toán cao cấp)
+
+Đế chế phép thuật: trường Laberg
+Mai là phù thuỷ tài năng - đang học đh năm 3 và kèm Parker một con trai chủ doanh nghiệp, chơi bời cho cậu ta học thống kê
