@@ -522,15 +522,28 @@ sẽ giảm. Đó không phải điều mà chúng ta muốn!
 Hàm mật độ xác suất; probabillity density function - PDF
 Giúp chúng ta biết đo lường xác suất một biến ngẫu nhiên giao động trong mỗi biến cố. Khả năng xảy ra một thứ thì luôn không âm và cũng đúng với hàm mật độ xác suất.
 
+==========================================================
+===================Phân phối chuẩn=========================
 
+- Khái niệm
+- Nhận xét
+- Tính chất quan trọng
 
+phân phối chuẩn 1,2 .png
+==========================================================
+===================Chuẩn hoá Phân phối chuẩn=========================
 
+Phân phối chuẩn tắc
 
+Phân phối chuẩn tắc 1,2.png
 
+Đánh giá độ chuẩn:
 
+Thông thường mọi dữ liệu có mẫu lớn vd n >30 thì định lý giới hạn trung tâm cho ta biết X_ngang có phân phối xấp xỉ phân phối chuẩn ta không cần quan tâm đến đánh giá độ chuẩn
+Với mẫu nhỏ: ta cần xác định xem dữ liệu có tuân theo phân phối chuẩn hay không, nhưng điều này là xấp xỉ và không chắc chắn hoàn toàn : mẫu chứa oulier, có độ lệch cao (skewness), nhiều đỉnh (multimodal), thì ta có thể kết luận rằng dữ liệu không tuân theo phân phối chuẩn. Người ta thường dùng Normal quantile plot để đánh giá độ chuẩn. Ta không phân tích chi tiết về quantile plot ở đây, nhưng có thể tham khảo cách vẽ qua R dùng qqnorm và qqline
 
-
-
+vd:
+phân phối chuẩn tắc 3.png
 
 
 
